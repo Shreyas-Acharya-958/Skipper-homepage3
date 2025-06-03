@@ -805,7 +805,8 @@ button, button:focus {
 }
 
 .btn-light {
-  color: var(--text-color) !important;
+  color: var(--primary-color) !important;
+  background-color: var(--secondary-color);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -872,7 +873,7 @@ button, button:focus {
 
 .btn-dark:hover, 
  .btn-dark:focus {
-  color: var(--text-color) !important;
+  color: var(--primary-color) !important;
 }
 
 .bg-dark {
@@ -5965,6 +5966,16 @@ ul.achivement li .medium {
   font-size: 22px;
 }
 
+.portfolio-area .item .info h5 a{
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.portfolio-area .item .info h5 a:hover{
+  color: var(--secondary-color) !important;
+}
+
+
 .portfolio-area .item .info span {
   text-transform: uppercase;
   font-weight: 400;
@@ -6907,9 +6918,9 @@ ul.achivement li .medium {
   color: var(--primary-color);
 }
 
-/* .blog-area .item .info .content h4 a:hover {
+.blog-area .item .info .content h4 a:hover {
   color: var(--secondary-color);
-} */
+}
 
 .yellow .blog-area .item .info .content h4 a:hover {
   color: #febc35;
@@ -8209,12 +8220,16 @@ footer .contact ul li {
   margin-bottom: 15px;
 }
 
+footer .contact ul li:hover{
+  color: var(--secondary-color);
+}
+
 footer .contact ul li a {
   font-weight: 400;
 }
 
 footer .contact ul li a:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .yellow footer .contact ul li a:hover {
@@ -8270,7 +8285,7 @@ footer .link ul li:last-child {
 }
 
 footer .link ul li a {
-  color: #666666;
+  color: var(--text-color);
   font-weight: 500;
 }
 
@@ -8279,7 +8294,7 @@ footer.bg-dark .link ul li a {
 }
 
 footer .link ul li a:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .yellow footer .link ul li a:hover {
@@ -9399,7 +9414,7 @@ nav.navbar.bootsnav.no-background li.search a {
 }
 
 .business footer .contact ul li i {
-  color: #ec1c24;
+  color: var(--primary-color);
 }
 
 .business footer .opening-hours li .closed {
