@@ -1293,7 +1293,8 @@ nav.navbar.bootsnav ul.nav > li > a{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  background-color: rgba(0, 0, 0, 0.15); 
+  /* Adjust opacity as needed */
   z-index: 1;
   pointer-events: none; /* allows buttons and slider below to remain clickable */
 }
@@ -8766,6 +8767,7 @@ footer .opening-hours li .closed {
 nav.navbar.bootsnav.nav-full .navbar-brand {
   position: relative;
   z-index: 1;
+  /* background: transparent !important; */
 }
 
 nav.navbar.bootsnav.nav-full .navbar-brand::after {
