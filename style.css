@@ -9199,6 +9199,19 @@ nav.navbar.bootsnav.no-background li.search a {
   padding: 42px 0;
 }
 
+@media (max-width: 576px){
+  .navbar {
+    background-color: var(--bg-primary) !important;
+  }
+  .navbar-toggle .fa.fa-bars,
+  .fa.fa-times{
+    color: white;
+  }
+  .carousel-wrapper{
+    margin-top: 80px;
+  }
+}
+
 .navbar.bg-dark .attr-nav .side-menu span {
   background: #ffffff;;
 }
