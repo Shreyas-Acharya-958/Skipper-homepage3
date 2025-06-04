@@ -426,6 +426,19 @@
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+
+    /* ==================================================
+        Navbar Logo
+     ===============================================*/
+    $(window).on('scroll', function () {
+  var navbar = $('nav.navbar.bootsnav.nav-full');
+  if ($(this).scrollTop() > 10) {
+    navbar.addClass('scrolled');
+  } else {
+    navbar.removeClass('scrolled');
+  }
+});
     
 
     /* ==================================================

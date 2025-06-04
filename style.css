@@ -8775,10 +8775,14 @@ nav.navbar.bootsnav.nav-full .navbar-brand::after {
   left: 0;
   top: 0;
   z-index: -1;
-  background: var(--primary-color);
+  background: transparent;
   height: 100%;
   width: 100%;
   content: "";
+}
+
+nav.navbar.bootsnav.nav-full.scrolled .navbar-brand::after {
+    background: var(--primary-color); /* or just use #007bff etc. */
 }
 
 nav.navbar.bootsnav.nav-full .navbar-brand .logo {
