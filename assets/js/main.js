@@ -54,10 +54,21 @@
         });
 
 
+
+
+
+
+
+
+
+
+
+
+        
         /* ==================================================
             # imagesLoaded active
         ===============================================*/
-        $('#portfolio-grid,.blog-masonry').imagesLoaded(function() {
+        $ ('#portfolio-grid,.blog-masonry').imagesLoaded(function() {
 
             /* Filter menu */
             $('.mix-item-menu').on('click', 'button', function() {
@@ -425,5 +436,115 @@
         $(".se-pre-con").fadeOut("slow");;
     });
 
+
+
+    
+  function thmOwlInit() {
+    // owl slider
+
+    if ($(".thm-owl__carousel").length) {
+      $(".thm-owl__carousel").each(function () {
+        let elm = $(this);
+        let options = elm.data('owl-options');
+        let thmOwlCarousel = elm.owlCarousel(options);
+      });
+    }
+
+    if ($(".thm-owl__carousel--custom-nav").length) {
+      $(".thm-owl__carousel--custom-nav").each(function () {
+        let elm = $(this);
+        let owlNavPrev = elm.data('owl-nav-prev');
+        let owlNavNext = elm.data('owl-nav-next');
+        $(owlNavPrev).on("click", function (e) {
+          elm.trigger('prev.owl.carousel');
+          e.preventDefault();
+        })
+
+        $(owlNavNext).on("click", function (e) {
+          elm.trigger('next.owl.carousel');
+          e.preventDefault();
+        })
+      });
+    }
+
+
+  }
+
+   if ($(".tabs-box").length) {
+    $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
+      e.preventDefault();
+      var target = $($(this).attr("data-tab"));
+
+      if ($(target).is(":visible")) {
+        return false;
+      } else {
+        target
+          .parents(".tabs-box")
+          .find(".tab-buttons")
+          .find(".tab-btn")
+          .removeClass("active-btn");
+        $(this).addClass("active-btn");
+        target
+          .parents(".tabs-box")
+          .find(".tabs-content")
+          .find(".tab")
+          .fadeOut(0);
+        target
+          .parents(".tabs-box")
+          .find(".tabs-content")
+          .find(".tab")
+          .removeClass("active-tab");
+        $(target).fadeIn(300);
+        $(target).addClass("active-tab");
+      }
+    });
+  }
+
+
+     if ($("#project-one__thumb").length) {
+    let testimonialsThumb = new Swiper("#project-one__thumb", {
+      slidesPerView: 4,
+      spaceBetween: 16,
+      speed: 1400,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      loop: true,
+      autoplay: {
+        delay: 5000
+      }
+    });
+
+    let testimonialsCarousel = new Swiper("#project-one__carousel", {
+      observer: true,
+      observeParents: true,
+      loop: true,
+      speed: 1400,
+      mousewheel: false,
+      slidesPerView: 1,
+      spaceBetween: 72,
+      autoplay: {
+        delay: 5000
+      },
+      thumbs: {
+        swiper: testimonialsThumb
+      },
+      pagination: {
+        el: '#testimonials-one__carousel-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+
+      "navigation": {
+        "nextEl": "#project-one__swiper-button-next",
+        "prevEl": "#project-one__swiper-button-prev"
+      },
+
+    });
+  }
+
+
+   $(window).on("load", function () {
+    thmOwlInit();
+   })
 
 })(jQuery); // End jQuery
